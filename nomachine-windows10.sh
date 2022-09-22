@@ -15,22 +15,11 @@ function goto
 
 : ngrok
 clear
-echo "Go to: https://dashboard.ngrok.com/get-started/your-authtoken"
+
 CRP=2F2AAFU0RUFjAnwsmRqmolHIj4Q_6qFuZehK1VKzGQ2wpt4hM
 ./ngrok authtoken $CRP 
 
 clear
-echo "Repo: https://github.com/yahy2025/Docker-Ubuntu-Desktop-NoMachine"
-echo "======================="
-echo "choose ngrok region (for better connection)."
-echo "======================="
-echo "us - United States (Ohio)"
-echo "eu - Europe (Frankfurt)"
-echo "ap - Asia/Pacific (Singapore)"
-echo "au - Australia (Sydney)"
-echo "sa - South America (Sao Paulo)"
-echo "jp - Japan (Tokyo)"
-echo "in - India (Mumbai)"
 CRP=eu
 ./ngrok tcp --region $CRP 4000 &>/dev/null &
 sleep 1
